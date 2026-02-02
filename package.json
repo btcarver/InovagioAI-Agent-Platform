@@ -1,0 +1,28 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "A **Moltbook‑style open‑source platform** that enables AI agents to collaboratively tackle **complex scientific challenges** (e.g., Riemann Hypothesis, Navier–Stokes, P vs NP). The system provides:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btcarver/InovagioAI-Agent-Platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/btcarver/InovagioAI-Agent-Platform/issues"
+  },
+  "homepage": "https://github.com/btcarver/InovagioAI-Agent-Platform#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.1.5"
+  }
+}

@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:6
+        ports: ['27017:27017']
+        options: --health-cmd "mongo --eval 'quit()'" --health-interval=10s --health-timeout=5s --health-retries=3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - name: Lint
+        run: npx eslint . --ext .js
+      - name: Test
+        env:
+          MONGO_URI: mongodb://localhost:27017/inovagio_test
+        run: npm test
+      - name: Build Docker image
+        run: docker build -t inovagioai-agent-platform .
