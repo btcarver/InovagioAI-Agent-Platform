@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="dna1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d9ff"/>
+      <stop offset="100%" style="stop-color:#0099cc"/>
+    </linearGradient>
+    <linearGradient id="dna2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#5b21b6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bg)" stroke="#0099cc" stroke-width="2"/>
+  
+  <!-- DNA Helix - Left strand -->
+  <path d="M60 30 Q40 60 70 80 Q100 100 70 120 Q40 140 60 170" 
+        fill="none" stroke="url(#dna1)" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- DNA Helix - Right strand -->
+  <path d="M140 30 Q160 60 130 80 Q100 100 130 120 Q160 140 140 170" 
+        fill="none" stroke="url(#dna2)" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Connecting rungs -->
+  <line x1="65" y1="50" x2="135" y2="50" stroke="#4ade80" stroke-width="2" opacity="0.7"/>
+  <line x1="80" y1="80" x2="120" y2="80" stroke="#4ade80" stroke-width="2" opacity="0.7"/>
+  <line x1="75" y1="110" x2="125" y2="110" stroke="#4ade80" stroke-width="2" opacity="0.7"/>
+  <line x1="65" y1="140" x2="135" y2="140" stroke="#4ade80" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Circuit nodes -->
+  <circle cx="65" cy="50" r="4" fill="#00d9ff"/>
+  <circle cx="135" cy="50" r="4" fill="#7c3aed"/>
+  <circle cx="80" cy="80" r="4" fill="#00d9ff"/>
+  <circle cx="120" cy="80" r="4" fill="#7c3aed"/>
+  <circle cx="75" cy="110" r="4" fill="#00d9ff"/>
+  <circle cx="125" cy="110" r="4" fill="#7c3aed"/>
+  <circle cx="65" cy="140" r="4" fill="#00d9ff"/>
+  <circle cx="135" cy="140" r="4" fill="#7c3aed"/>
+  
+  <!-- Central glow point -->
+  <circle cx="100" cy="100" r="8" fill="#4ade80" opacity="0.8"/>
+  <circle cx="100" cy="100" r="4" fill="#ffffff"/>
+</svg>
